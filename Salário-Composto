@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+class Main {
+  
+  public static void main(String[] args) {
+     
+    Scanner teclado = new Scanner(System.in);
+     
+     System.out.print("Quanto você ganha por hora: ");
+      double H = teclado.nextDouble();
+     System.out.print("Quantas horas você trabalha no mês: ");
+      double M = teclado.nextDouble();
+
+      double Z = H * M;
+      
+      double I = Z * 11 /100;
+
+      double S = Z * 8 /100;
+
+      double C = Z * 5 /100;
+    
+      double L = Z - I - S - C;
+    
+       System.out.println("Seu ganho mensal bruto é: " + Z + ".");
+    
+       System.out.println("O valor pago para o Imposto de Renda é: " + I + ".");
+
+       System.out.println("O valor pago para o INSS: " + S + ".");
+       
+       System.out.println("E o valor pago para o sindicato é: " + C + ".");
+       
+       System.out.println("Seu salário liquído é: " + L + ".");
+     teclado.close();
+     } 
+}
